@@ -1,0 +1,217 @@
+<mvc:View
+    controllerName="com.app.fioriproject1.controller.home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.f"
+>
+    <f:DynamicPage
+        id="idEmployeeListPage"
+        headerExpanded="true"
+    >
+        <f:title>
+            <f:DynamicPageTitle id="idEmployeeListPageTitle">
+                <f:heading>
+                    <Title
+                        id="idEmployeePageHeadingTitle"
+                        text="{i18n>title}"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label
+                        id="idEmployeeListPageECL"
+                        text="{i18n>SubTitle}"
+                    />
+                </f:expandedContent>
+                 <f:navigationActions>
+                    <Button
+                        id="idBtnFullScreen"
+                        icon="sap-icon://full-screen"
+                        type="Transparent"
+                    />
+                    <Button
+                        id="idBtnDecline"
+                        icon="sap-icon://decline"
+                        type="Transparent"
+                    />
+                </f:navigationActions>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader
+                id="idDynamicPageHeader"
+                pinnable="true">
+                <HBox id="idFilterHLayout" alignContent="SpaceAround" width="100vw">
+                    <VBox id="idFNameFilter" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="idFNameFilterLabel"
+                            text="{i18n>fname}"
+                        />
+                        <MultiInput
+                            id="idFNameFilterValue"
+                            showSuggestion="false" 
+                            width = "" 
+                            showValueHelp="false"
+                                                 
+                        />
+                    </VBox>
+                    <VBox id="idLNameFilter" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="idLNameFilterLabel"
+                            text="{i18n>lname}"
+                        />
+                        <MultiInput
+                            id="idLNameFilterValue"
+                           showSuggestion="false" 
+                            width = "" 
+                            showValueHelp="false"
+                        />
+                    </VBox>
+                    <VBox id="iAgeFilter" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="iAgeFilterLabel"
+                            text="{i18n>age}"
+                        />
+                        <MultiInput
+                            id="iAgeFilterValue"
+                            showSuggestion="false" 
+                            width = "" 
+                            showValueHelp="false"
+                        />
+                    </VBox>   
+
+                   <VBox id="idEmailFilter" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="idEmailFilterLabel"
+                            text="{i18n>email}"
+                        />
+                        <MultiInput
+                            id="idEmailFilterValue"
+                            showSuggestion="false" 
+                            width = "" 
+                            showValueHelp="false"
+                        />
+                    </VBox>
+
+
+                    <VBox id="idGoButton" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="idGoButtonLabel"
+                            text=""
+                        />
+                        <Button
+                            id="idGoButtonValue"
+                            text="Go"
+                            type="Emphasized"
+                            press="onGoPress"
+                        />
+                    </VBox>   
+                    <VBox id="idClearFilterButton" class="sapUiSmallMarginEnd">
+                        <Label
+                            id="idClearFilterButtonLabel"
+                            text=""
+                        />
+                        <Button
+                            id="idClearFilterButtonValue"
+                            text="Clear Filter"
+                            type="Emphasized"
+                            press="onClearFilterPress"
+                        />
+                    </VBox>   
+                </HBox>
+            </f:DynamicPageHeader>
+                </f:header>
+                <f:content>
+            <Table
+                id="idEmployeeTable"
+                mode="SingleSelectMaster"
+                alternateRowColors="true"
+                items="{/employee}"
+                selectionChange="EmployeeDetails"
+            >
+                <headerToolbar>
+                    <OverflowToolbar id="idEmployeeTableHeader">
+                        <Title
+                            id="idTableHeaderTitle"
+                            text="Employees"
+                        />
+                        <ToolbarSpacer id="idTableHeaderSpacer" />
+                        <Button
+                            id="idBtnCreate"
+                            icon="sap-icon://add"
+                            tooltip="Create Employee"
+                            type="Success"
+                            press="onCreateEmployeedetails"
+                        />
+                        <Button
+                            id="idBtnDelete"
+                            icon="sap-icon://delete"
+                            tooltip="Delete Employee"
+                            type="Negative"
+                            
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="idNameCol">
+                        <Title
+                            id="idNameColTitle"
+                            text="{i18n>name}"
+                        />
+                    </Column>
+                    <Column id="idGenderCol">
+                        <Title
+                            id="idGenderColTitle"
+                            text="{i18n>age}"
+                        />
+                    </Column>
+                    <Column id="idDOBCol">
+                        <Title
+                            id="idDOBColTitle"
+                            text="{i18n>dob}"
+                        />
+                    </Column>
+                    <Column id="idEmailCol">
+                        <Title
+                            id="idEmailColTitle"
+                            text="{i18n>email}"
+                        />
+                    </Column>
+                    <Column id="idPhoneCol">
+                        <Title
+                            id="idPhoneColTitle"
+                            text="{i18n>phone}"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="idEmployeeTableColListItem">
+                        <cells>
+                            <Text
+                                id="idNameColValue"
+                                text="{fname} {lname}"
+                            />
+                            <Text
+                                id="idGenderColValue"
+                                text="{age}"
+                            />
+                            <Text
+                                id="idDOBColValue"
+                                text="{dob}"
+                            />
+                            <Text
+                                id="idEmailColValue"
+                                text="{email}"
+                            />
+                            <Text
+                                id="idPhoneColValue"
+                                text="{phonenumber}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

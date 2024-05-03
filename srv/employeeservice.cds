@@ -1,5 +1,5 @@
 using { demo.db as my} from '../db/data-model';
-
+@path: '/EmployeeSRV'
 service employeeService {
 entity employee as projection on my.employee;
 entity Department  as projection on my.Department;

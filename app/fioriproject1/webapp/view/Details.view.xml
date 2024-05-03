@@ -45,6 +45,15 @@
                         text="{fname} {lname}"
                     />
                 </uxap:expandedHeading>
+                <uxap:actions>
+                    <Button
+                        id="idBtnDelete"
+                        icon="sap-icon://delete"
+                        tooltip="Delete Employee"
+                        type="Negative"
+                        press="onDeleteEmployee"
+                    />
+                </uxap:actions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
         <uxap:sections>

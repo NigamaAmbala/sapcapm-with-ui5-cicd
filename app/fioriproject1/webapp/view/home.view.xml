@@ -105,7 +105,7 @@
                             text="Go"
                             type="Emphasized"
                             press="onGoPress"
-                        />
+                        /> 
                     </VBox>   
                     <VBox id="idClearFilterButton" class="sapUiSmallMarginEnd">
                         <Label
@@ -142,7 +142,7 @@
                             icon="sap-icon://add"
                             tooltip="Create Employee"
                             type="Success"
-                            press="onCreateEmployeedetails"
+                            press="addbutton"
                         />
                         <Button
                             id="idBtnDelete"

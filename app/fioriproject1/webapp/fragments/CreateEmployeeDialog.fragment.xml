@@ -46,52 +46,52 @@
                 singleContainerFullSize="false"
             >
                 <Label
-                    id="idFirstNameLabel"
+                    id="idFirstNameLabel12"
                     text="First Name"
                 />
                 <Input
-                    id="idFirstNameInput"
-                    value=""
+                    id="idFirstNameInput12"
+                    value="{localModel>/fname}"
                 />
                 <Label
-                    id="idLastNameLabel"
+                    id="idLastNameLabel12" 
                     text="Last Name"
                 />
                 <Input
-                    id="idLastNameInput"
-                    value=""
+                    id="idLastNameInput12"
+                    value="{localModel>/lname}"
                 />
                 <Label
-                    id="idGenderLabel"
-                    text="Gender"
+                    id="idAgeLabel12"
+                    text="Age"
                 />
                 <Input
-                    id="idGenderInput"
-                    value=""
+                    id="idAgeInput12"
+                    value="{localModel>/age}"
                 />
                 <Label
-                    id="idDOBLabel"
+                    id="idDOBLabel12"
                     text="DOB"
                 />
                 <Input
-                    id="idDOBInput"
-                    value=""
+                    id="idDOBInput12"
+                    value="{localModel>/dob}"
                 />
                 <Label
-                    id="idEmailLabel"
+                    id="idEmailLabel12"
                     text="Email"
                 />
                 <Input
-                    id="idEmailInput"
-                    value=""
+                    id="idEmailInput12"
+                    value="{localModel>/email}"
                 />
                 <Label
-                    id="idPhoneNumberLabel"
+                    id="idPhoneNumberLabel12"
                     text="Phone Number"
                 />
                 <Input
-                    id="idPhoneNumberInput"
-                    value=""
+                    id="idPhoneNumberInput12"
+                    value="{localModel>/phonenumber}"
                 />
             </form:SimpleForm>
         </content>

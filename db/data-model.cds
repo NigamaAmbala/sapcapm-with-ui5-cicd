@@ -3,8 +3,7 @@ namespace demo.db;
 using { cuid } from '@sap/cds/common';
 using {reusable.types as types} from './ReusableTypes';
 @assert.unique: {
-  email: [email],
-  phonenumber: [phonenumber]
+  email: [email]
 }
 entity employee:cuid {
     fname : String;

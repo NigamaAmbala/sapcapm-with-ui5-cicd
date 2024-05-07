@@ -6,7 +6,7 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
-        "@sap/cds": "^7.8.2",
+        "@sap/cds": "^7.9.0",
         "@sap/cds-hana": "^2",
         "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
         "@sap/xssec": "^3.6.1",
@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "@cap-js/sqlite": "^1",
-        "@sap/cds-dk": "^7",
+        "@sap/cds-dk": "^7.9.1",
         "@sap/ux-specification": "^1.120.8",
         "rimraf": "^3.0.2"
     },

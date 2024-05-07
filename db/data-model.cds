@@ -8,14 +8,14 @@ using {reusable.types as types} from './ReusableTypes';
 entity employee:cuid {
     fname : String;
     lname : String;
-    age : String;
+    gender: String;
     dob  : Date;
-  email : String;
-  phonenumber : Integer;
+    age : String;
+    email : String;
+    phonenumber : String;
   department  :  Association to Department;
    address         : Composition of many Address
                      on address.employee = $self;
-
   salary          : Association to Salary;
   designation     : Association to Designation;
 }

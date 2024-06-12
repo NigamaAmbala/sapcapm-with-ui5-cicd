@@ -1,15 +1,15 @@
 {
+  "manifest.json": 1715840773980,
   "controller/BaseController.js": 1715065914552,
-  "manifest.json": 1715072521371,
   "model/models.js": 1713787499942,
   "controller/home.controller.js": 1715066088802,
   "controller/Details.controller.js": 1715063877813,
-  "i18n/i18n.properties": 1715063546249,
+  "i18n/i18n.properties": 1715840493618,
   "controller/App.controller.js": 1713787499946,
   "Component.js": 1713787499934,
-  "Component-preload.js": 1715072521543,
-  "controller/home-dbg.controller.js": 1715066088802,
+  "Component-preload.js": 1715840774405,
   "model/models-dbg.js": 1713787499942,
+  "controller/home-dbg.controller.js": 1715066088802,
   "controller/Details-dbg.controller.js": 1715063877813,
   "controller/BaseController-dbg.js": 1715065914552,
   "controller/App-dbg.controller.js": 1713787499946,
@@ -24,5 +24,5 @@
   "fragments/CreateEmployeeDialog.fragment.xml": 1715060760612,
   "fragments/Address.fragment.xml": 1714109342452,
   "css/style.css": 1713787499946,
-  "index.html": 1713787499938
+  "index.html": 1715684133575
 }
